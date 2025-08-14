@@ -2,7 +2,7 @@
 
 A beautiful particle animation library inspired by Saturn's rings. Built with HTML5 Canvas, it creates real-time animated Saturn rings with realistic physics.
 
-![Saturn Ring Animation](https://via.placeholder.com/800x400/000000/FFFFFF?text=Saturn+Ring+Animation)
+![Saturn Ring Animation Demo](loop.gif)
 
 ## Features
 
@@ -14,9 +14,6 @@ A beautiful particle animation library inspired by Saturn's rings. Built with HT
 - 💬 **Text Display**: Show two lines of text in the center of the rings
 - ✨ **Smooth Animations**: Beautiful fade-in effects and organic movement
 
-## Demo
-
-[Live Demo](https://your-github-username.github.io/saturn-ring-animation/)
 
 ## Quick Start
 
