@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>回転する粒子アニメーション</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="controls">
+        <button
+            onclick="ParticleRingAPI.setPattern((ParticleRingAPI.getConfig().currentPattern + 1) % 4)">パターン変更</button>
+        <button onclick="ParticleRingAPI.togglePause()">一時停止/再生</button>
+        <button onclick="changeSpeed()">速度変更</button>
+        <button onclick="adjustRingWidth()">リング幅調整</button>
+        <button onclick="adjustParticleCount()">粒子数調整</button>
+        <div class="text-controls">
+            <input type="text" id="centerText1" placeholder="1行目（中サイズ）" maxlength="15">
+            <input type="text" id="centerText2" placeholder="2行目（小サイズ）" maxlength="25">
+            <button onclick="updateCenterText()">文字更新</button>
+            <button
+                onclick="ParticleRingAPI.showCenterText ? ParticleRingAPI.hideText() : ParticleRingAPI.showText()">文字表示切替</button>
+        </div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <script src="particle-animation.js"></script>
+
+    <script>
+        window.addEventListener('load', function () {
+            // 設定を適用
+            ParticleRingAPI.setCanvasSize(400, 300);
+            ParticleRingAPI.setParticleDensity(0.8);  // 少ない
+
+            // 初期化完了後にcanvasを表示
+            setTimeout(() => {
+                document.getElementById('canvas').classList.add('loaded');
+            }, 100);
+        });
+    </script>
+</body>
+
+</html>

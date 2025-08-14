@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+canvas {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+canvas.loaded {
+    opacity: 1;
+}
+
+.controls {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #00ff64;
+    z-index: 10;
+}
+
+.controls button {
+    background: rgba(0, 255, 100, 0.2);
+    border: 1px solid #00ff64;
+    color: #00ff64;
+    padding: 8px 16px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.controls button:hover {
+    background: rgba(0, 255, 100, 0.4);
+    box-shadow: 0 0 10px rgba(0, 255, 100, 0.5);
+}
+
+.text-controls {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(0, 255, 100, 0.3);
+}
+
+.text-controls input {
+    background: rgba(0, 255, 100, 0.1);
+    border: 1px solid #00ff64;
+    color: #00ff64;
+    padding: 6px 12px;
+    margin: 3px;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 200px;
+    display: block;
+}
+
+.text-controls input::placeholder {
+    color: rgba(0, 255, 100, 0.6);
+}
+
+.text-controls input:focus {
+    outline: none;
+    background: rgba(0, 255, 100, 0.2);
+    box-shadow: 0 0 5px rgba(0, 255, 100, 0.3);
+}
